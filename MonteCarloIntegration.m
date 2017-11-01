@@ -7,7 +7,7 @@ function integral = MonteCarloIntegration(f, lower_limit, upper_limit, n)
 
   % Span rectangle over function
   min = f(fminbnd(f, lower_limit, upper_limit));
-  max = f(fminbnd(@(x) -f(x), lower_limit, upper_limit));
+  max = f(fminbnd(@(x) - f(x), lower_limit, upper_limit));
   
   % Populate random values over rectangle
   width = upper_limit - lower_limit;
